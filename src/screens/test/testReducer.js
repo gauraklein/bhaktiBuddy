@@ -7,5 +7,8 @@ export const testReducer = (state = testState, action) => {
     console.log(state, 'this is the state')
     // console.log(action, "this is the action")
 
-    return state;
+    switch (action.type) {
+        default:
+          return state
+      }
 }

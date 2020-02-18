@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Display } from "./src/display";
-import { Provider } from "react-redux";
+import { Provider} from "react-redux";
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import reducers from './src/redux/rootReducer'
@@ -17,4 +17,10 @@ export default function App() {
     <Display />
     </Provider>
   )
+}
+
+const mapStateToProps = state => {
+  return {
+    test: state.test
+  }
 }
