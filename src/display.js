@@ -1,6 +1,7 @@
 import React from "react";
 import { Stylesheet, Text, View, Dimensions } from "react-native";
 import {connect} from 'react-redux'
+import {testfn} from "./screens/test/testAction"
 
 function Display(props) {
     console.log(props, 'this will be props once I get that working lol')
@@ -8,7 +9,7 @@ function Display(props) {
     const screenHeight = Dimensions.get('window').height
   return (
     <View style={{width: screenWidth, height: screenHeight}}>
-      <Text style={{marginTop: 100}}>TESTING THE DISPLAY</Text>
+      <Text style={{marginTop: 100}} onPress={props.testfn}>{props.test.text}</Text>
     </View>
   );
 }
@@ -20,4 +21,10 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Display)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    testfn: () => dispatch(testfn())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Display)
