@@ -1,15 +1,14 @@
 import React from "react";
-import { Button, Text, View, Dimensions } from "react-native";
+import { View, Text, Button } from "react-native";
+import {globalStyles} from "./globalStylesheet"
 import {connect} from 'react-redux'
 import {testfn} from "./screens/test/testAction"
 
 
 function Display(props) {
     console.log(props, 'this will be props once I get that working lol')
-    const screenWidth = Dimensions.get('window').width
-    const screenHeight = Dimensions.get('window').height
   return (
-    <View style={{display: "flex"}}>
+    <View style={globalStyles.fullScreen}>
       <Text style={{marginTop: 100}} onPress={props.testfn}>{props.test.text}</Text>
       <Button
         title="Go to Details"

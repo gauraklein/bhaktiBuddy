@@ -9,6 +9,12 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import reducers from "./src/redux/rootReducer";
 
+//SCREENS
+import {Home} from "./src/screens/home/homeComponent"
+import {Home} from "./src/screens"
+import {Home} from "./src/screens"
+import {Home} from "./src/screens"
+
 const reducer = combineReducers(reducers);
 
 const store = createStore(reducer, applyMiddleware(thunk));
