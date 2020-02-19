@@ -10,10 +10,10 @@ import thunk from "redux-thunk";
 import reducers from "./src/redux/rootReducer";
 
 //SCREENS
-import {Home} from "./src/screens/home/homeComponent"
-import {Home} from "./src/screens"
-import {Home} from "./src/screens"
-import {Home} from "./src/screens"
+import Home from "./src/screens/home/homeComponent"
+import Japa from "./src/screens/japa/japaComponent"
+import Reflections from "./src/screens/reflections/reflectionsComponent"
+import Inspiration from "./src/screens/inspiration/inspirationComponent"
 
 const reducer = combineReducers(reducers);
 
@@ -48,8 +48,10 @@ export default function App() {
       {/* <Display> */}
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="Home" component={Display} />
-            <Stack.Screen name="Details" component={DetailsScreen} />
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Japa" component={Japa} />
+            <Stack.Screen name="Reflections" component={Reflections} />
+            <Stack.Screen name="Inspiration" component={Inspiration} />
           </Stack.Navigator>
         </NavigationContainer>
       {/* </Display> */}
