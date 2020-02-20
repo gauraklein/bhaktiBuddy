@@ -9,5 +9,20 @@ export const globalStyles = StyleSheet.create({
         height: screenHeight,
         display: "flex",
         flexDirection: "column"
+        },
+    nav: {
+        flex: 1,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        backgroundColor: "#485460",
+        color: "white"
+    },
+    content: {
+        flex: 4,
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#485460"
+
     }
 })
