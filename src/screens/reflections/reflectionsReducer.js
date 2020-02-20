@@ -1,9 +1,9 @@
-// import {ADD_MANTRA, ADD_ROUND} from "./japaActions"
+import {TITLE_TEXT_CHANGE, BODY_TEXT_CHANGE} from "./reflectionsActions"
 
 const reflectionState = {
     reflectionTitle: "",
     reflectionBody: "",
-    reflectionDate: "date" 
+    reflectionDate: "Feb 2, 2020" 
 }
 
 export const reflectionReducer = (state = reflectionState, action) => {
@@ -13,24 +13,23 @@ export const reflectionReducer = (state = reflectionState, action) => {
     console.log("reducer")
 
     switch (action.type) {
-        // case ADD_MANTRA:
-        //     console.log("reflection hit reducer", state)
-        //     let newMantraCount = state.mantraCount + 1
-        //     console.log(newMantraCount)
-        //     return {
-        //         ...state,
-        //         mantraCount: newMantraCount
-        //     }
-        // break;
-        // case ADD_ROUND: 
-        //     console.log("Add Round hit reducer")
-        //     let newRoundCount = state.roundCount + 1
-        //     return {
-        //         ...state,
-        //         roundCount: newRoundCount,
-        //         mantraCount: 0
-        //     }
-        // break;
+        case TITLE_TEXT_CHANGE:
+            console.log("title change hit reducer", state.reflectionTitle)
+            // let newMantraCount = state.mantraCount + 1
+            // console.log(newMantraCount)
+            return {
+                ...state,
+                reflectionTitle: action.payload
+            }
+        break;
+        case BODY_TEXT_CHANGE: 
+            console.log("body change hit reducer", state.reflectionBody)
+
+            return {
+                ...state,
+                reflectionBody: action.payload
+            }
+        break;
         default:
           return state
       }

@@ -6,15 +6,23 @@ import { reflectionStyles } from "./reflectionsStylesheet"
 import { connect } from "react-redux";
 import Nav from "../../util/nav/navComponent";
 import { testfn } from "../test/testAction";
+import { handleTitleChange, handleBodyChange} from './reflectionsActions'
 
 function Reflections(props) {
-  console.log(props, "this will be props once I get that working lol");
   return (
     <View style={globalStyles.fullScreen}>
       <View style={globalStyles.content}>
-        <Text h3 style={reflectionStyles.dateStyle}>{props.reflections.reflectionDate}</Text>
-        <TextInput style={reflectionStyles.titleStyle} placeholder="Title" />
-        <TextInput style={reflectionStyles.bodyStyle} placeholder="What inspired you today?" multiline={true} />
+        <Text h5 style={reflectionStyles.dateStyle}>{props.reflections.reflectionDate}</Text>
+        <TextInput 
+        style={reflectionStyles.titleStyle} 
+        placeholder="Title"
+        // value={value}
+        onChangeText={(text) => props.handleTitleChange(text)} />
+        <TextInput 
+        style={reflectionStyles.bodyStyle} 
+        placeholder="What inspired you today?" 
+        multiline={true}
+        onChangeText={(text) => props.handleBodyChange(text)} />
         <TouchableOpacity style={reflectionStyles.button}>
           <Text style={reflectionStyles.buttonText}>
             Submit
@@ -34,7 +42,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    testfn: () => dispatch(testfn())
+    testfn: () => dispatch(testfn()),
+    handleTitleChange: (text) => dispatch(handleTitleChange(text)),
+    handleBodyChange: (text) => dispatch(handleBodyChange(text))
   };
 };
 
