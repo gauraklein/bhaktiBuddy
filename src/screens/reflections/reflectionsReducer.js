@@ -1,9 +1,11 @@
-import {TITLE_TEXT_CHANGE, BODY_TEXT_CHANGE} from "./reflectionsActions"
+import moment from 'moment'
+import {TITLE_TEXT_CHANGE, BODY_TEXT_CHANGE, REFLECTION_SUBMIT} from "./reflectionsActions"
 
 const reflectionState = {
     reflectionTitle: "",
     reflectionBody: "",
-    reflectionDate: "Feb 2, 2020" 
+    reflectionDate: moment().format("MMM Do"),
+    userReflection: [] 
 }
 
 export const reflectionReducer = (state = reflectionState, action) => {
@@ -30,6 +32,23 @@ export const reflectionReducer = (state = reflectionState, action) => {
                 reflectionBody: action.payload
             }
         break;
+        case REFLECTION_SUBMIT:
+            console.log("Reflection Submitted")
+            let newState = {
+                ...state,
+                reflectionTitle: "",
+                reflectionBody: ""
+            }
+            let newReflection = {
+                reflectionTitle: state.reflectionTitle,
+                reflectionBody: state.reflectionBody,
+                reflectionDate: moment()
+            }
+
+            newState.userReflection.push(newReflection)
+
+            return newState
+
         default:
           return state
       }
