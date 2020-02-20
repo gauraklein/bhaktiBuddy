@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { globalStyles } from "../../globalStylesheet";
 import {japaStyles} from "./japaStylesheet"
 import {mantraCountFn} from "./japaActions"
@@ -13,16 +13,23 @@ function Japa(props) {
     <View style={globalStyles.fullScreen}>
       <View style={globalStyles.content}>
         <View style={japaStyles.counterView}>
-          <Text h3>
-              Rounds completed: {props.japa.roundCount}
+          <Text style={japaStyles.countText}>
+              Rounds completed: 
           </Text>
-          <Text h3>
-            Mantras completed: {props.japa.mantraCount}
+          <Text style={japaStyles.countText}>
+          {props.japa.roundCount}
           </Text>
-          <Button
-          color="white"
-          title="add mantra"
-          onPress={props.mantraCountFn.bind(this, props.japa.mantraCount)} />
+          <Text style={japaStyles.countText}>
+            Mantras completed: 
+          </Text>
+          <Text style={japaStyles.countNumber}>
+              {props.japa.mantraCount}
+            </Text>  
+          <TouchableOpacity
+          style={japaStyles.buttonStyle}
+          onPress={props.mantraCountFn.bind(this, props.japa.mantraCount)}>
+          <Text style={japaStyles.buttonText}>Add Mantra</Text>
+          </TouchableOpacity>
         </View>
       </View>
       <Nav navigation={props.navigation} />

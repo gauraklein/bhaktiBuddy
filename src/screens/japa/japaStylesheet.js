@@ -6,6 +6,23 @@ export const japaStyles = StyleSheet.create({
         display: "flex",
         flexDirection: 'column',
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "space-evenly"
+    },
+    countText: {
+        fontSize: 30
+    },
+    countNumber: {
+        fontSize: 60
+    },
+    buttonStyle: {
+        color: "white",
+        borderWidth: 3, 
+        borderRadius: 50,
+        borderColor: "white",
+        padding: 10,
+        paddingHorizontal: 30
+    },
+    buttonText: {
+        color: "white"
     }
 })
