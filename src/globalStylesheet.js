@@ -22,7 +22,8 @@ export const globalStyles = StyleSheet.create({
         flex: 4,
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#485460"
+        backgroundColor: "#485460",
+        justifyContent: "space-evenly"
 
     }
 })

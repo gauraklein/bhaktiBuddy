@@ -5,7 +5,7 @@ import {japaStyles} from "./japaStylesheet"
 import {mantraCountFn} from "./japaActions"
 import { connect } from "react-redux";
 import Nav from "../../util/nav/navComponent";
-import { testfn } from "../test/testAction";
+
 
 function Japa(props) {
 
