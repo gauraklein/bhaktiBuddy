@@ -25,3 +25,11 @@ This is a react native app created with the idea of helping bhakti yogis stay fo
 - SQL db *most likely*
 
 - Express
+
+*** DEV
+
+- uses expo
+
+- to get running:
+
+```yarn start```
