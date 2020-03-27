@@ -6,8 +6,13 @@ export const navStyles = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-evenly",
-        backgroundColor: "#485460",
-        color: "white"
+        backgroundColor: "#404b56",
+        color: "white",
+        paddingTop: 20,
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.8,
+        shadowRadius: 10,  
     },
     navIconContainer: {
         flex: 1,
