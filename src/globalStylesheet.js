@@ -10,12 +10,13 @@ export const globalStyles = StyleSheet.create({
         display: "flex",
         flexDirection: "column"
         },
+        //THIS HAS AN ALTERNATE BG COLOR
     nav: {
         flex: 1,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-evenly",
-        backgroundColor: "#485460",
+        backgroundColor: "#eff0eb",
         color: "white"
     },
     content: {
