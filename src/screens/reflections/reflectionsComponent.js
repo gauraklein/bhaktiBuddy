@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import { globalStyles } from "../../globalStylesheet";
 import { connect } from "react-redux";
-import Nav from "../../util/nav/navComponent";
+import Nav from "../../components/nav/navComponent";
 import { testfn } from "../test/testAction";
 
 function Reflections(props) {
