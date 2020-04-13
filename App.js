@@ -2,8 +2,6 @@ import "react-native-gesture-handler";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Button, Text, View } from "react-native";
-import Display from "./src/display";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
@@ -23,10 +21,8 @@ const store = createStore(reducer, applyMiddleware(thunk));
 const Stack = createStackNavigator();
 
 export default function App() {
-  // console.log(store, "this is the store")
   return (
     <Provider store={store}>
-      {/* <Display> */}
         <NavigationContainer>
           <Stack.Navigator
           screenOptions={{

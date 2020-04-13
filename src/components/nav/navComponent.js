@@ -1,12 +1,9 @@
 import React from "react";
-import { View, Text, Button, TouchableOpacity, Image } from "react-native";
+import { View, Button, TouchableOpacity, Image } from "react-native";
 import { navStyles } from "./navStylesheet";
-import { connect } from "react-redux";
-import { testfn } from "../../screens/test/testAction";
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 function Nav(props) {
-  console.log(props, "this will be props once I get that working lol");
   return (
     <View elevation={5} style={navStyles.navParent}>
       
@@ -69,17 +66,4 @@ function Nav(props) {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    test: state.test,
-    test2: state.test2
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    testfn: () => dispatch(testfn())
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Nav);
+export default Nav
