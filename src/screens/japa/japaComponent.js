@@ -3,11 +3,13 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { globalStyles } from "../../globalStylesheet";
 import {japaStyles} from "./japaStylesheet"
 import {mantraCountFn} from "./japaActions"
-import { connect } from "react-redux";
+import { useSelector, useDispatch} from "react-redux";
 import Nav from "../../components/nav/navComponent";
-import { testfn } from "../test/testAction";
 
 function Japa(props) {
+
+  const { roundCount, mantraCount } = useSelector(state => state.japa)
+  const dispatch = useDispatch()
 
   return (
     <View style={globalStyles.fullScreen}>
@@ -17,17 +19,17 @@ function Japa(props) {
               Rounds completed: 
           </Text>
           <Text style={japaStyles.countText}>
-          {props.japa.roundCount}
+          {roundCount}
           </Text>
           <Text style={japaStyles.countText}>
             Mantras completed: 
           </Text>
           <Text style={japaStyles.countNumber}>
-              {props.japa.mantraCount}
+              {mantraCount}
             </Text>  
           <TouchableOpacity
           style={japaStyles.buttonStyle}
-          onPress={props.mantraCountFn.bind(this, props.japa.mantraCount)}>
+          onPress={() => dispatch(mantraCountFn(mantraCount))}>
           <Text style={japaStyles.buttonText}>Add Mantra</Text>
           </TouchableOpacity>
         </View>
@@ -37,16 +39,4 @@ function Japa(props) {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    japa: state.japa
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    mantraCountFn: (currentCount) => dispatch(mantraCountFn(currentCount))
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Japa);
+export default Japa;
