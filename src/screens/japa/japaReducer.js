@@ -7,10 +7,6 @@ const japaState = {
 
 export const japaReducer = (state = japaState, action) => {
 
-    // console.log(state, 'this is the state')
-    // console.log(action, "this is the action")
-    console.log("reducer")
-
     switch (action.type) {
         case ADD_MANTRA:
             console.log("Add Mantra hit reducer", state)

@@ -1,17 +1,14 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, } from "react-native";
 import { globalStyles } from "../../globalStylesheet";
-import { connect } from "react-redux";
 import Nav from "../../components/nav/navComponent";
-import { testfn } from "../test/testAction";
 
 function Home(props) {
-  console.log(props, "this will be props once I get that working lol");
   return (
     <View style={globalStyles.fullScreen}>
       <View style={globalStyles.content}>
-        <Text style={{ marginTop: 100 }} onPress={props.testfn}>
-          {props.test.text}
+        <Text style={{ marginTop: 100, textAlign: "center" }}>
+          HOME PAGE GOES HERE
         </Text>
       </View>
       <Nav navigation={props.navigation} />
@@ -19,17 +16,4 @@ function Home(props) {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    test: state.test,
-    test2: state.test2
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    testfn: () => dispatch(testfn())
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;
