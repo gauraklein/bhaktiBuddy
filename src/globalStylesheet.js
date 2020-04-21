@@ -20,7 +20,7 @@ export const globalStyles = StyleSheet.create({
         color: "white"
     },
     content: {
-        flex: 4,
+        flex: 9,
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#485460"

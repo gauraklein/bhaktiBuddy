@@ -8,7 +8,7 @@ export const navStyles = StyleSheet.create({
         justifyContent: "space-evenly",
         backgroundColor: "#404b56",
         color: "white",
-        paddingTop: 20,
+        // paddingTop: 20,
         shadowColor: 'black',
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.8,
@@ -22,8 +22,11 @@ export const navStyles = StyleSheet.create({
         // borderColor: "white",
         // borderTopColor: "white",
         // borderWidth: 5,
-        marginBottom: 100,
+        // marginBottom: 100,
         alignItems: "center"
+    },
+    navText: {
+        color: "white"
     }
 
 })

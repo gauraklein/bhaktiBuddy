@@ -26,13 +26,14 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator
           screenOptions={{
-            headerStyle: {
-              backgroundColor: '#485460'
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
+            headerShown: false
+            // headerStyle: {
+            //   backgroundColor: '#485460'
+            // },
+            // headerTintColor: '#fff',
+            // headerTitleStyle: {
+            //   fontWeight: 'bold',
+            // },
           }}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Japa" component={Japa} />
