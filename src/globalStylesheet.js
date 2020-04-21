@@ -8,7 +8,8 @@ export const globalStyles = StyleSheet.create({
         width: screenWidth,
         height: screenHeight,
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        backgroundColor: "#fbfbfb"
         },
         //THIS HAS AN ALTERNATE BG COLOR
     nav: {
