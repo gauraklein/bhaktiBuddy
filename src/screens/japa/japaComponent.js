@@ -28,9 +28,9 @@ function Japa(props) {
               {mantraCount}
             </Text>  
           <TouchableOpacity
-          style={japaStyles.buttonStyle}
+          style={globalStyles.buttonStyle}
           onPress={() => dispatch(mantraCountFn(mantraCount))}>
-          <Text style={japaStyles.buttonText}>Add Mantra</Text>
+          <Text style={globalStyles.buttonText}>Add Mantra</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -14,15 +14,5 @@ export const japaStyles = StyleSheet.create({
     countNumber: {
         fontSize: 60
     },
-    buttonStyle: {
-        color: "black",
-        borderWidth: 3, 
-        borderRadius: 50,
-        borderColor: "black",
-        padding: 10,
-        paddingHorizontal: 30
-    },
-    buttonText: {
-        color: "black"
-    }
+  
 })

@@ -26,5 +26,17 @@ export const globalStyles = StyleSheet.create({
         flexDirection: "column",
         backgroundColor: "#fbfbfb"
 
+    },
+    buttonStyle: {
+        color: "black",
+        borderWidth: 3, 
+        borderRadius: 50,
+        borderColor: "black",
+        padding: 10,
+        paddingHorizontal: 30,
+        margin: 10
+    },
+    buttonText: {
+        color: "black"
     }
 })

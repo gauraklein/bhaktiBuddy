@@ -3,6 +3,7 @@ import { View, Text, } from "react-native";
 import { globalStyles } from "../../globalStylesheet";
 import { homeStyles } from "./homeStylesheet"
 import HomeScreenStatus from "./components/HomeScreenStatus"
+import AddJapaModal from "./components/AddJapaModal"
 import Nav from "../../components/nav/navComponent";
 
 function Home(props) {
@@ -10,6 +11,7 @@ function Home(props) {
     <View style={globalStyles.fullScreen}>
       <HomeScreenStatus />
       <View style={globalStyles.content}>
+      <AddJapaModal />
         <Text style={{ marginTop: 100, textAlign: "center" }}>
           HOME PAGE GOES HERE
         </Text>
