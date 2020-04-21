@@ -13,7 +13,7 @@ function Nav(props) {
         style={navStyles.navIconContainer}
         onPress={() => props.navigation.navigate("Home")}
       >
-        <Ionicons name="md-home" size={24} color="white" />
+        <Ionicons name="md-home" size={24} color="black" />
         <Text style={navStyles.navText}>Home</Text>
       </TouchableOpacity>
 
@@ -25,7 +25,7 @@ function Nav(props) {
       >
         <Image
           source={require('../../../assets/pray.png')}
-          style={{ width: 24, height: 24, tintColor: "white" }}
+          style={{ width: 24, height: 24, tintColor: "black" }}
         />
         <Text style={navStyles.navText}>Japa</Text>
       </TouchableOpacity>
@@ -37,7 +37,7 @@ function Nav(props) {
         style={navStyles.navIconContainer}
         onPress={() => props.navigation.navigate("Reflections")}
       >
-        <Ionicons name="ios-journal" size={24} color="white" />
+        <Ionicons name="ios-journal" size={24} color="black" />
         <Text style={navStyles.navText}>Reflections</Text>
       </TouchableOpacity>
 
@@ -47,7 +47,7 @@ function Nav(props) {
         style={navStyles.navIconContainer}
         onPress={() => props.navigation.navigate("Inspiration")}
       >
-        <MaterialCommunityIcons name="lightbulb-on" size={24} color="white" />
+        <MaterialCommunityIcons name="lightbulb-on" size={24} color="black" />
         <Text style={navStyles.navText}>Inspiration</Text>
       </TouchableOpacity>
     </View>

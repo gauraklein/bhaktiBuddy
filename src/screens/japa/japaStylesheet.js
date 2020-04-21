@@ -15,14 +15,14 @@ export const japaStyles = StyleSheet.create({
         fontSize: 60
     },
     buttonStyle: {
-        color: "white",
+        color: "black",
         borderWidth: 3, 
         borderRadius: 50,
-        borderColor: "white",
+        borderColor: "black",
         padding: 10,
         paddingHorizontal: 30
     },
     buttonText: {
-        color: "white"
+        color: "black"
     }
 })

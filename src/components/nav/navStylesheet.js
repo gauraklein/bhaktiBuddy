@@ -6,10 +6,10 @@ export const navStyles = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-evenly",
-        backgroundColor: "#404b56",
+        backgroundColor: "#fbfbfb",
         color: "white",
         // paddingTop: 20,
-        shadowColor: 'black',
+        shadowColor: '#ced6e0',
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.8,
         shadowRadius: 10,  
@@ -26,7 +26,7 @@ export const navStyles = StyleSheet.create({
         alignItems: "center"
     },
     navText: {
-        color: "white"
+        color: "black"
     }
 
 })

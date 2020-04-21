@@ -23,7 +23,7 @@ export const globalStyles = StyleSheet.create({
         flex: 9,
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#485460"
+        backgroundColor: "#fbfbfb"
 
     }
 })
