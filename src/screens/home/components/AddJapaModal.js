@@ -8,14 +8,12 @@ import NumericInput from 'react-native-numeric-input'
 const AddJapaModal = () => {
     
     const { japaModalVisible } = useSelector(state => state.home)
-    const dispatch = useDispatch
-
-    console.log(japaModalVisible, 'this is japa modal visible')
+    const dispatch = useDispatch()
 
     return (
         <View style={homeStyles.japaModalContainer}>
             <Modal
-            animationType="slide"
+            animationType="fade"
             transparent={true}
             visible={japaModalVisible}
             style={homeStyles.japaModalContainer}
@@ -30,20 +28,22 @@ const AddJapaModal = () => {
                     {/* <NumericInput /> */}
                 </View>
 
-                <TouchableOpacity style={globalStyles.buttonStyle}>
-                    <Text style={globalStyles.buttonText}>
-                        Submit
-                    </Text>
-                </TouchableOpacity>
+                <View style={homeStyles.japaModalButtons}>                    
+                    <TouchableOpacity style={globalStyles.buttonStyle}>
+                        <Text style={globalStyles.buttonText}>
+                            Submit
+                        </Text>
+                    </TouchableOpacity>
 
-                <TouchableOpacity 
-                style={globalStyles.buttonStyle}
-                onPress={() => dispatch({type: "HIDE_JAPA_MODAL"})}
-                >
-                    <Text style={globalStyles.buttonText}>
-                        Close
-                    </Text>
-                </TouchableOpacity>
+                    <TouchableOpacity 
+                    style={globalStyles.buttonStyle}
+                    onPress={() => dispatch({type: "HIDE_JAPA_MODAL"})}
+                    >
+                        <Text style={globalStyles.buttonText}>
+                            Close
+                        </Text>
+                    </TouchableOpacity>
+                </View>
 
             </View>
 

@@ -60,6 +60,10 @@ export const homeStyles = StyleSheet.create({
    numericInput: {
        padding: 10,
 
+   },
+   japaModalButtons: {
+       display: "flex",
+       flexDirection: "row"
    }
 
 

@@ -6,11 +6,9 @@ const homeState = {
 }
 
 export const homeReducer = (state = homeState, action) => {
-    console.log(state, 'this is the homestate')
+
     switch (action.type) {
-        // TODO: make this work
         case "SHOW_JAPA_MODAL":
-            console.log("japa modal hit reducer")
             let newState = {
                 ...state,
                 japaModalVisible: true
@@ -18,11 +16,11 @@ export const homeReducer = (state = homeState, action) => {
             return newState;
         break;
         case "HIDE_JAPA_MODAL":
-            newState = {
+            nextState = {
                 ...state,
                 japaModalVisible: false
             }
-            return newState;
+            return nextState;
         break;
         default:
           return state
