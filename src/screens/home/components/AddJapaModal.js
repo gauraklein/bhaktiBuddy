@@ -10,6 +10,8 @@ const AddJapaModal = () => {
     const { japaModalVisible } = useSelector(state => state.home)
     const dispatch = useDispatch
 
+    console.log(japaModalVisible, 'this is japa modal visible')
+
     return (
         <View style={homeStyles.japaModalContainer}>
             <Modal
@@ -25,7 +27,7 @@ const AddJapaModal = () => {
                 </Text>
 
                 <View style={homeStyles.numericInput}>
-                    <NumericInput />
+                    {/* <NumericInput /> */}
                 </View>
 
                 <TouchableOpacity style={globalStyles.buttonStyle}>

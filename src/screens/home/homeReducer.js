@@ -1,19 +1,19 @@
 const homeState = {
     username: "User",
     roundGoal: 16,
-    japaModalVisible: true
+    japaModalVisible: false
 
 }
 
 export const homeReducer = (state = homeState, action) => {
-
+    console.log(state, 'this is the homestate')
     switch (action.type) {
         // TODO: make this work
         case "SHOW_JAPA_MODAL":
             console.log("japa modal hit reducer")
             let newState = {
                 ...state,
-                AddJapaModalVisible: true
+                japaModalVisible: true
             }
             return newState;
         break;
