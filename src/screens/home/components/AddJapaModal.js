@@ -3,11 +3,10 @@ import { View, Text, TouchableOpacity, Modal, TextInput } from "react-native";
 import { homeStyles } from "../homeStylesheet";
 import { useSelector, useDispatch} from "react-redux"
 import { globalStyles } from "../../../globalStylesheet";
-import NumericInput from 'react-native-numeric-input'
 
 const AddJapaModal = () => {
     
-    const { japaModalVisible } = useSelector(state => state.home)
+    const { roundCount, japaModalVisible } = useSelector(state => state.japa)
     const dispatch = useDispatch()
 
     return (

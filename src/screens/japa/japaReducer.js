@@ -2,7 +2,8 @@ import {ADD_MANTRA, ADD_ROUND} from "./japaActions"
 
 const japaState = {
     mantraCount: 0,
-    roundCount: 0
+    roundCount: 0,
+    japaModalVisible: false
 }
 
 export const japaReducer = (state = japaState, action) => {
@@ -26,6 +27,17 @@ export const japaReducer = (state = japaState, action) => {
                 mantraCount: 0
             }
         break;
+        case "SHOW_JAPA_MODAL":
+            return {
+                ...state,
+                japaModalVisible: true
+            }
+        break;
+        case "HIDE_JAPA_MODAL":
+            return {
+                ...state,
+                japaModalVisible: false
+            }
         default:
           return state
       }
