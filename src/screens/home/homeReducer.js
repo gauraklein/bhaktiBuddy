@@ -2,7 +2,6 @@ const homeState = {
     username: "User",
     roundGoal: 16,
     japaModalVisible: false
-
 }
 
 export const homeReducer = (state = homeState, action) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Modal } from "react-native";
+import { View, Text, TouchableOpacity, Modal, TextInput } from "react-native";
 import { homeStyles } from "../homeStylesheet";
 import { useSelector, useDispatch} from "react-redux"
 import { globalStyles } from "../../../globalStylesheet";
@@ -24,8 +24,12 @@ const AddJapaModal = () => {
                     How many rounds have you completed today?
                 </Text>
 
-                <View style={homeStyles.numericInput}>
-                    {/* <NumericInput /> */}
+                <View style={homeStyles.numericInputContainer}>
+                <TextInput  
+                    placeholder="16.."  
+                    style={homeStyles.numericInput}  
+                    keyboardType={'numeric'}
+                />  
                 </View>
 
                 <View style={homeStyles.japaModalButtons}>                    

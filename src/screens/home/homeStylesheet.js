@@ -33,7 +33,7 @@ export const homeStyles = StyleSheet.create({
    },
    japaModalContainer: {
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
    },
@@ -43,11 +43,12 @@ export const homeStyles = StyleSheet.create({
     //    borderColor: "black",
        borderRadius: 15,
        width: screenWidth - 50,
-       height: screenHeight - 500,
-       marginTop: 200,
+       height: screenHeight / 3,
+       marginTop: screenHeight / 3,
        display: "flex",
        flexDirection: "column",
        alignItems: "center",
+       justifyContent: "space-between",
        padding: 20,
        backgroundColor: "#dfe4ea"
     //    justifyContent: "center"
@@ -57,9 +58,17 @@ export const homeStyles = StyleSheet.create({
        fontWeight: "700",
        textAlign: "center"
    },
-   numericInput: {
+   numericInputContainer: {
        padding: 10,
-
+   },
+   numericInput: {
+        textAlign: 'center',  
+        height: 40,  
+        width: 100,
+        borderRadius: 10,  
+        borderWidth: 2,  
+        borderColor: 'black',  
+        marginBottom: 10  
    },
    japaModalButtons: {
        display: "flex",
