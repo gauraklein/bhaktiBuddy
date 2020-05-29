@@ -6,7 +6,7 @@ import { globalStyles } from "../../../globalStylesheet";
 
 const AddJapaModal = () => {
     
-    const { roundCount, japaModalVisible } = useSelector(state => state.japa)
+    const { roundCount, japaModalVisible, japaModalValue } = useSelector(state => state.japa)
     const dispatch = useDispatch()
 
     return (
@@ -26,13 +26,19 @@ const AddJapaModal = () => {
                 <View style={homeStyles.numericInputContainer}>
                 <TextInput  
                     placeholder="16.."  
+                    value={japaModalValue}
                     style={homeStyles.numericInput}  
                     keyboardType={'numeric'}
+                    id="japaModalValue"
+                    onChange={(e) => {
+                        dispatch({ type: "UPDATE_JAPA_MODAL_VALUE", payload: japaModalValue })
+                    }}
                 />  
                 </View>
 
                 <View style={homeStyles.japaModalButtons}>                    
-                    <TouchableOpacity style={globalStyles.buttonStyle}>
+                    <TouchableOpacity style={globalStyles.buttonStyle}
+                    onPress={() => dispatch({ type: "ADD_ROUND_MANUALLY", payload: 2})}>
                         <Text style={globalStyles.buttonText}>
                             Submit
                         </Text>
