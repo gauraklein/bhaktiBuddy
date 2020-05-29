@@ -10,7 +10,7 @@ const AddJapaModal = () => {
     const dispatch = useDispatch()
     const [manualRoundCount, setManualRoundCount] = useState(0)
     const handleTextChange = (text) => {
-        const numericValue = parseInt(text)
+        const numericValue = Number(text)
         console.log(numericValue, 'this is the numeric value')
         dispatch({ type: "UPDATE_JAPA_MODAL_VALUE", payload: numericValue})
     }
@@ -39,12 +39,6 @@ const AddJapaModal = () => {
                 </View>
 
                 <View style={homeStyles.japaModalButtons}>                    
-                    <TouchableOpacity style={globalStyles.buttonStyle}
-                    onPress={() => dispatch({ type: "ADD_ROUND_MANUALLY", payload: japaModalValue})}>
-                        <Text style={globalStyles.buttonText}>
-                            Submit
-                        </Text>
-                    </TouchableOpacity>
 
                     <TouchableOpacity 
                     style={globalStyles.buttonStyle}
@@ -52,6 +46,15 @@ const AddJapaModal = () => {
                     >
                         <Text style={globalStyles.buttonText}>
                             Close
+                        </Text>
+                    </TouchableOpacity>
+                    
+                    <TouchableOpacity style={globalStyles.buttonStyle}
+                    onPress={() => {
+                        dispatch({ type: "ADD_ROUND_MANUALLY", payload: japaModalValue})
+                        dispatch({ type: "HIDE_JAPA_MODAL"})}}>
+                        <Text style={globalStyles.buttonText}>
+                            Submit
                         </Text>
                     </TouchableOpacity>
                 </View>
