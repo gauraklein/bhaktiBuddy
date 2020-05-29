@@ -6,11 +6,42 @@ import { globalStyles } from "../../../globalStylesheet";
 
 
 
+
 function HomeScreenStatus () {
 
   const { username, roundGoal } = useSelector(state => state.home)
   const { roundCount } = useSelector(state => state.japa)
   const dispatch = useDispatch()
+
+  const subHeadingText = () => {
+    if (roundCount < roundGoal) {
+        return (
+            <Text style={homeStyles.subHeading}>
+                <Text>You have </Text>
+                <Text style={homeStyles.roundGoalText}>
+                 { roundGoal - roundCount }
+                </Text>
+                 <Text> rounds left today!</Text>
+            </Text>
+        ) 
+    } else if (roundCount === roundGoal) {
+        return (
+            <Text style={homeStyles.subHeading}>
+                Congratulations! You have reached your goal for the day!
+            </Text>
+        )
+    } else if (roundCount > roundGoal) {
+        return (
+            <Text style={homeStyles.subHeading}>
+                <Text>Congratulations! You are </Text>
+                <Text style={homeStyles.roundGoalText}>
+                { roundCount - roundGoal }
+                </Text>
+                <Text> rounds over todays goal!</Text>
+            </Text>
+        )
+    }
+}
 
   return (
     <View style={homeStyles.homeStatusContainer}>
@@ -21,13 +52,7 @@ function HomeScreenStatus () {
             <Text style={homeStyles.roundGoalText}> {roundGoal}</Text>
         </Text>
 
-        <Text style={homeStyles.subHeading}>
-            <Text>You have </Text>
-            <Text style={homeStyles.roundGoalText}>
-                { roundGoal - roundCount }
-                </Text>
-            <Text> rounds left today!</Text>
-        </Text>
+       {subHeadingText()}
 
         <View style={homeStyles.homeStatusButtonContainer}>
             <TouchableOpacity style={globalStyles.buttonStyle}

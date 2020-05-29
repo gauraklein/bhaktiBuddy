@@ -24,11 +24,13 @@ const AddJapaModal = () => {
             >
 
             <View style={homeStyles.japaModal}>
+            
                 <Text style={homeStyles.modalText}>
                     How many rounds have you completed today?
                 </Text>
 
                 <View style={homeStyles.numericInputContainer}>
+
                 <TextInput  
                     placeholder="16.."  
                     // value={manualRoundCount}
@@ -36,6 +38,7 @@ const AddJapaModal = () => {
                     keyboardType={'numeric'}
                     onChange={(e) => handleTextChange(e.nativeEvent.text)}
                 />  
+
                 </View>
 
                 <View style={homeStyles.japaModalButtons}>                    
@@ -48,7 +51,7 @@ const AddJapaModal = () => {
                             Close
                         </Text>
                     </TouchableOpacity>
-                    
+
                     <TouchableOpacity style={globalStyles.buttonStyle}
                     onPress={() => {
                         dispatch({ type: "ADD_ROUND_MANUALLY", payload: japaModalValue})

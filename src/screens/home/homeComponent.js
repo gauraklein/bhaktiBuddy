@@ -13,7 +13,7 @@ function Home(props) {
       <View style={globalStyles.content}>
       <AddJapaModal />
         <Text style={{ marginTop: 100, textAlign: "center" }}>
-          HOME PAGE GOES HERE
+          CALENDER GOES HERE
         </Text>
       </View>
       <Nav navigation={props.navigation} />
