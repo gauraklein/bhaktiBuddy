@@ -3,12 +3,12 @@ import { View, Text, } from "react-native";
 import { globalStyles } from "../../globalStylesheet";
 import Nav from "../../components/nav/navComponent";
 
-function Inspiration(props) {
+function Progress(props) {
   return (
     <View style={globalStyles.fullScreen}>
       <View style={globalStyles.content}>
         <Text style={{ marginTop: 100, textAlign: "center" }}>
-          Inspiration will go here
+          Progress will go here
         </Text>
       </View>
       <Nav navigation={props.navigation} />
@@ -17,4 +17,4 @@ function Inspiration(props) {
 }
 
 
-export default Inspiration;
+export default Progress;

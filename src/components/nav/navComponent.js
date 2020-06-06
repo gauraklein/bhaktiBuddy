@@ -41,14 +41,14 @@ function Nav(props) {
         <Text style={navStyles.navText}>Reflections</Text>
       </TouchableOpacity>
 
-      {/* INSPIRATION ICON */}
+      {/* PROGRESS ICON */}
 
       <TouchableOpacity
         style={navStyles.navIconContainer}
-        onPress={() => props.navigation.navigate("Inspiration")}
+        onPress={() => props.navigation.navigate("Progress")}
       >
         <MaterialCommunityIcons name="lightbulb-on" size={24} color="black" />
-        <Text style={navStyles.navText}>Inspiration</Text>
+        <Text style={navStyles.navText}>Progress</Text>
       </TouchableOpacity>
     </View>
   );
