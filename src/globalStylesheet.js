@@ -33,7 +33,7 @@ export const globalStyles = StyleSheet.create({
         borderRadius: 50,
         borderColor: "black",
         padding: 10,
-        paddingHorizontal: 30,
+        paddingHorizontal: 20,
         margin: 10
     },
     buttonText: {

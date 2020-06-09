@@ -100,7 +100,21 @@ export const homeStyles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "space-evenly"
-}
+},
+    verticalSpacer: {
+        borderBottomColor: 'black',
+        borderBottomWidth: 2,
+        alignSelf: 'stretch'
+    },
+    circle: {
+        borderRadius: Math.round(screenWidth + screenHeight) / 2,
+        width: Dimensions.get('window').width * 0.5,
+        height: Dimensions.get('window').width * 0.5,
+        backgroundColor:'lightgrey',
+        justifyContent: 'center',
+        alignItems: 'center',
+        // alignSelf: 'center'
+      }
 
 
 })

@@ -47,12 +47,27 @@ function HomeScreenStatus () {
     <View style={homeStyles.homeStatusContainer}>
         <Text style={homeStyles.greeting}>Hello {username}!</Text>
 
-        <Text style={homeStyles.subHeading}>
+        <View style={{display:'flex', flexDirection:"column", alignItems:'center'}}>
+
+        <Text style={{fontSize:40, margin: 5, textAlign: 'center'}}>
+            Today's status
+        </Text>
+        <View style={homeStyles.circle}>
+
+        <Text style={{fontSize: 40}}>
+            {roundCount}/{roundGoal}
+        </Text>
+        </View>
+        </View>
+
+        {/* <Text style={homeStyles.subHeading}>
             Your current daily round goal is 
             <Text style={homeStyles.roundGoalText}> {roundGoal}</Text>
         </Text>
 
-       {subHeadingText()}
+       {subHeadingText()} */}
+
+
 
         <View style={homeStyles.homeStatusButtonContainer}>
             <TouchableOpacity style={globalStyles.buttonStyle}
@@ -63,11 +78,12 @@ function HomeScreenStatus () {
                 </Text>
             </TouchableOpacity>
 
-            {/* <TouchableOpacity style={globalStyles.buttonStyle}>
+
+            <TouchableOpacity style={globalStyles.buttonStyle}>
                 <Text style={globalStyles.buttonText}>
-                    Add Reflection
+                    Update Japa Goal
                 </Text>
-            </TouchableOpacity> */}
+            </TouchableOpacity>
         </View>
     </View>
   );
