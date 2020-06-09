@@ -4,6 +4,7 @@ import { globalStyles } from "../../globalStylesheet";
 import { homeStyles } from "./homeStylesheet"
 import HomeScreenStatus from "./components/HomeScreenStatus"
 import AddJapaModal from "./components/AddJapaModal"
+import HorizontalNumberDisplay from './components/HorizontalNumberDisplay';
 import Nav from "../../components/nav/navComponent";
 
 function Home(props) {
@@ -12,9 +13,7 @@ function Home(props) {
       <HomeScreenStatus />
       <View style={globalStyles.content}>
       <AddJapaModal />
-        <Text style={{ marginTop: 100, textAlign: "center" }}>
-          CALENDER GOES HERE
-        </Text>
+      <HorizontalNumberDisplay />
       </View>
       <Nav navigation={props.navigation} />
     </View>

@@ -73,7 +73,34 @@ export const homeStyles = StyleSheet.create({
    japaModalButtons: {
        display: "flex",
        flexDirection: "row"
-   }
+   },
+   horizontalContainer: {
+        display: "flex",
+        flexDirection: "row",
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: 'black',
+        margin: 10,
+        padding: 10,
+        width: screenWidth - 20,
+        height: 100
+   },
+   horizontalNumDisplay: {
+       display: "flex",
+       flexDirection: 'column',
+       flex: 1,
+       alignItems: "center",
+       justifyContent: "space-evenly",
+       borderRightColor: 'black',
+       borderRightWidth: 2
+   },
+   horizontalNumDisplayNoBorder: {
+    display: "flex",
+    flexDirection: 'column',
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-evenly"
+}
 
 
 })
