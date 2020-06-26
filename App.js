@@ -12,6 +12,7 @@ import Home from "./src/screens/home/homeComponent"
 import Japa from "./src/screens/japa/japaComponent"
 import Reflections from "./src/screens/reflections/reflectionsComponent"
 import Progress from "./src/screens/progress/progressComponent"
+import Calendar from "./src/screens/calendar/calendarComponent"
 
 const reducer = combineReducers(reducers);
 
@@ -36,6 +37,7 @@ export default function App() {
             // },
           }}>
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Calendar" component={Calendar} />
             <Stack.Screen name="Japa" component={Japa} />
             <Stack.Screen name="Reflections" component={Reflections} />
             <Stack.Screen name="Progress" component={Progress} />

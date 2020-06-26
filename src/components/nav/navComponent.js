@@ -17,15 +17,25 @@ function Nav(props) {
         <Text style={navStyles.navText}>Home</Text>
       </TouchableOpacity>
 
-      {/*JAPA ICON WILL NEED A BETTER ICON AT SOME POINT*/}
+      {/* CALENDAR ICON */}
 
       <TouchableOpacity
         style={navStyles.navIconContainer}
+        onPress={() => props.navigation.navigate("Calendar")}
+      >
+        <MaterialCommunityIcons name="calendar-blank" size={24} color="black" />
+        <Text style={navStyles.navText}>Calendar</Text>
+      </TouchableOpacity>
+
+      {/*JAPA ICON WILL NEED A BETTER ICON AT SOME POINT*/}
+
+      <TouchableOpacity
+        style={navStyles.navJapaContainer}
         onPress={() => props.navigation.navigate("Japa")}
       >
         <Image
           source={require('../../../assets/pray.png')}
-          style={{ width: 24, height: 24, tintColor: "black" }}
+          style={navStyles.japaIcon}
         />
         <Text style={navStyles.navText}>Japa</Text>
       </TouchableOpacity>
