@@ -8,11 +8,11 @@ import thunk from "redux-thunk";
 import reducers from "./src/redux/rootReducer";
 
 //SCREENS
-import Home from "./src/screens/home/homeComponent"
-import Japa from "./src/screens/japa/japaComponent"
-import Reflections from "./src/screens/reflections/reflectionsComponent"
-import Progress from "./src/screens/progress/progressComponent"
-import Calendar from "./src/screens/calendar/calendarComponent"
+import Home from "./src/screens/home/HomeComponent"
+import Japa from "./src/screens/japa/JapaComponent"
+import Reflections from "./src/screens/reflections/ReflectionsComponent"
+import Progress from "./src/screens/progress/ProgressComponent"
+import Calendar from "./src/screens/calendar/CalendarComponent"
 
 const reducer = combineReducers(reducers);
 
