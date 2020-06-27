@@ -4,7 +4,7 @@ import { globalStyles } from "../../globalStylesheet";
 import {japaStyles} from "./japaStylesheet"
 import {mantraCountFn} from "./japaActions"
 import { useSelector, useDispatch} from "react-redux";
-import Nav from "../../components/nav/navComponent";
+import Nav from "../../components/nav/NavComponent";
 
 function Japa(props) {
 

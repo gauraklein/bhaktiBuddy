@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, } from "react-native";
 import { globalStyles } from "../../globalStylesheet";
-import Nav from "../../components/nav/navComponent";
+import Nav from "../../components/nav/NavComponent";
 
 function Reflections(props) {
   return (
@@ -13,6 +13,7 @@ function Reflections(props) {
       </View>
       <Nav navigation={props.navigation} />
     </View>
+
   );
 }
 

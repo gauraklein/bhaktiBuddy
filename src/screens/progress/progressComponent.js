@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, } from "react-native";
 import { globalStyles } from "../../globalStylesheet";
-import Nav from "../../components/nav/navComponent";
+import Nav from "../../components/nav/NavComponent";
 
 function Progress(props) {
   return (
@@ -15,6 +15,5 @@ function Progress(props) {
     </View>
   );
 }
-
 
 export default Progress;

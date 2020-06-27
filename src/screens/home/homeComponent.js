@@ -5,7 +5,7 @@ import { homeStyles } from "./homeStylesheet"
 import HomeScreenStatus from "./components/HomeScreenStatus"
 import AddJapaModal from "./components/AddJapaModal"
 import HorizontalNumberDisplay from './components/HorizontalNumberDisplay';
-import Nav from "../../components/nav/navComponent";
+import Nav from "../../components/nav/NavComponent";
 
 function Home(props) {
   return (

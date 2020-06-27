@@ -61,6 +61,7 @@ function Nav(props) {
         <Text style={navStyles.navText}>Progress</Text>
       </TouchableOpacity>
     </View>
+    
   );
 }
 
